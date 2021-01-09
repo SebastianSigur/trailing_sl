@@ -1,0 +1,5 @@
+Price is 40641.00 at ->20:32:26. Stop loss at ->0.0
+Price is 40639.55 at ->20:33:11. Stop loss at ->0.0
+Price is 40633.59 at ->20:34:13. Stop loss at ->0.0
+Price is 40630.85 at ->20:36:12. Stop loss at ->0.0
+Price is 40638.83 at ->20:37:16. Stop loss at ->40224.5415
