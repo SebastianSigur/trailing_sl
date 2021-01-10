@@ -40,3 +40,38 @@ P/L %: -0.26927674161610904
 % move from lowest price 0.0
 Status: holding
 
+Price: 37507.86 at 20:00:25. 
+Stop loss at: 37614.4703.
+Best price: 37689.85
+P/L %: -0.26927674161610904
+% move from lowest price 0.0
+Status: holding
+
+Price: 37553.09 at 20:02:27. 
+Stop loss at: 37614.4703.
+Best price: 37689.85
+P/L %: -0.26927674161610904
+% move from lowest price 0.12058805807635409
+Status: holding
+
+Price: 37531.12 at 20:03:28. 
+Stop loss at: 37614.4703.
+Best price: 37689.85
+P/L %: -0.26927674161610904
+% move from lowest price 0.06201366860172364
+Status: holding
+
+Price: 37540.41 at 20:04:24. 
+Stop loss at: 37614.4703.
+Best price: 37689.85
+P/L %: -0.26927674161610904
+% move from lowest price 0.08678181053252132
+Status: holding
+
+Price: 37639.36 at 20:05:26. 
+Stop loss at: 37564.08128.
+Best price: 37639.36
+P/L %: -0.26927674161610904
+% move from lowest price NAN
+Status: buying
+

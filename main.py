@@ -89,6 +89,10 @@ class stock:
 
     def call(self, time_delay, stop_loss_prosentage, buy_procent):
         current_price = get_data.get_data_from_website(URL, self._XPath)[0]
+        if current_price == 'Fullscreen':
+            print('Error tack fyrir')
+            assert False
+            
         current_price = current_price.replace(',', '')
         self.update_best_price(current_price)
         self.update_stop_loss(stop_loss_prosentage, current_price)
