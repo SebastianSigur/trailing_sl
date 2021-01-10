@@ -1,5 +1,42 @@
-Price is 40641.00 at ->20:32:26. Stop loss at ->0.0
-Price is 40639.55 at ->20:33:11. Stop loss at ->0.0
-Price is 40633.59 at ->20:34:13. Stop loss at ->0.0
-Price is 40630.85 at ->20:36:12. Stop loss at ->0.0
-Price is 40638.83 at ->20:37:16. Stop loss at ->40224.5415
+Price: 37689.85 at 19:57:19. 
+Stop loss at: 37614.4703.
+Best price: 37689.85
+P/L %: 0.0
+% move from lowest price NAN
+Status: buying
+
+Price: 37588.36 at 19:57:27. 
+Stop loss at: 37614.4703.
+Best price: 37689.85
+P/L %: -0.26927674161610904
+% move from lowest price NAN
+Status: Selling
+
+Price: 37558.89 at 19:58:26. 
+Stop loss at: 37614.4703.
+Best price: 37689.85
+P/L %: -0.26927674161610904
+% move from lowest price 0.0
+Status: holding
+
+Price: 37588.36 at 19:58:28. 
+Stop loss at: 37614.4703.
+Best price: 37689.85
+P/L %: -0.26927674161610904
+% move from lowest price 0.07846344766844204
+Status: holding
+
+Price: 37558.89 at 19:58:31. 
+Stop loss at: 37614.4703.
+Best price: 37689.85
+P/L %: -0.26927674161610904
+% move from lowest price 0.0
+Status: holding
+
+Price: 37537.82 at 19:59:27. 
+Stop loss at: 37614.4703.
+Best price: 37689.85
+P/L %: -0.26927674161610904
+% move from lowest price 0.0
+Status: holding
+
