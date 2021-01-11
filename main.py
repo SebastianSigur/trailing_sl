@@ -59,7 +59,7 @@ class stock:
         self.update_stop_loss(stop_loss_prosentage, self.best_price)
         self.procent_move_from_sell = 'NAN'
         self.status = 'buying'
-        print('buy')
+       #print('buy')
 
     def check_loss(self):
         if float(self.price) <= float(self.stop_loss):
@@ -81,18 +81,20 @@ class stock:
                 # print(float(self.price)/float(self.buy_short_price)*100)
             except ZeroDivisionError:
                 pass
-        print(str(self.now_money) + "kr")
+        #print(str(self.now_money) + "kr")
 
     def should_i_buy(self, buy_procent, stop_loss_prosentage):
         if self.procent_move_from_sell >= buy_procent:
             self.buy_short(stop_loss_prosentage)
 
     def call(self, time_delay, stop_loss_prosentage, buy_procent):
-        current_price = get_data.get_data_from_website(URL, self._XPath)[0]
-        if current_price == 'Fullscreen':
-            print('Error tack fyrir')
-            assert False
-            
+        current_price = 'Fullscreen'
+        while current_price == 'Fullscreen':
+            current_price = get_data.get_data_from_website(URL, self._XPath)
+            if current_price[0] == 'Fullscreen':
+                print('Waring')
+            current_price = current_price[0]
+
         current_price = current_price.replace(',', '')
         self.update_best_price(current_price)
         self.update_stop_loss(stop_loss_prosentage, current_price)
@@ -112,27 +114,33 @@ class stock:
                 s_l_hit = self.check_loss()
                 if s_l_hit:
                     self.sell()
-                    print('sold')
+                    #print('sold')
                     self.lowest_price = self.price
             else:
                 self.update_lowest_price()
                 self.procent_move_from_sell = (float(self.price)/float(self.lowest_price)-1)*100
                 self.should_i_buy(buy_procent, stop_loss_prosentage)
-            self.write_to_text_file(self.file_name, f"Price: {self.price} at {now.strftime('%H:%M:%S')}. "
-                                                    f"\nStop loss at: {self.stop_loss}."
-                                                    f"\nBest price: {self.best_price}\n"
+            self.write_to_text_file(self.file_name, f"Price: {self.price} at {now.strftime('%H:%M:%S')}. \n"
+                                                    f"Stop loss: {self.stop_loss}.\n"
+                                                    f"Best price: {self.best_price}\n"
                                                     f"P/L %: {self.p_l_from_buy}\n"
                                                     f"% move from lowest price {self.procent_move_from_sell}\n"
+                                                    f"Lowest Price: {self.lowest_price}\n"
+                                                    f"Money P/L: {self.now_money}\n" 
                                                     f"Status: {self.status}"
                                                     f"\n\n")
             time.sleep(time_delay)
 
 
 def main():
-    bitcoin = stock(URL, XPATH, "output.txt")
-
+    bitcoin1 = stock(URL, XPATH, "output0.1-0.1.txt")
+    bitcoin3 = stock(URL, XPATH, "output0.3-0.3.txt")
+    bitcoin5 = stock(URL, XPATH, "output0.5-0.5.txt")
+    bitcoin10 = stock(URL, XPATH, "output1-1.txt")
     while True:
-        bitcoin.call(1, 0.2, 0.2)
-
+        bitcoin1.call(1, 0.1, 0.1)
+        bitcoin3.call(1, 0.3, 0.3)
+        bitcoin5.call(1, 0.5, 0.5)
+        bitcoin10.call(1, 1, 1)
 
 main()
