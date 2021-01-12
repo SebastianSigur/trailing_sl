@@ -8,7 +8,7 @@ def get_data_from_website(url, xpath):
     page = requests.get(url)
     tree = html.fromstring(page.content)
     price = tree.xpath(xpath)
-    price[0] = price[0].replace(' ', '')
+    price[0] = price[0].replace(',', '')
     return price
 
 
