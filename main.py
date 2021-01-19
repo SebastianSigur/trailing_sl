@@ -142,6 +142,4 @@ def main():
         bitcoin3.call(1, 0.3, 0.3)
         bitcoin5.call(1, 0.5, 0.5)
         bitcoin10.call(1, 1, 1)
-        print('running')
-
 main()
